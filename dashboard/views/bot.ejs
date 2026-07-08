@@ -1,0 +1,99 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>🤖 Bot Control</h1>
+    <div class="subtitle">Manage your Discord bot process</div>
+  </div>
+</div>
+
+<div class="stats-grid">
+  <div class="stat-card" id="status-card">
+    <div class="stat-icon" id="status-icon">⏳</div>
+    <div class="stat-value" id="status-value">...</div>
+    <div class="stat-label">Bot Status</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">🆔</div>
+    <div class="stat-value" id="pid-value">-</div>
+    <div class="stat-label">Process ID</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">⏱️</div>
+    <div class="stat-value" id="uptime-value">-</div>
+    <div class="stat-label">Uptime</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h2>🎮 Controls</h2>
+  </div>
+  <div class="card-body">
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-success" onclick="controlBot('start')">▶ Start Bot</button>
+      <button class="btn btn-danger" onclick="controlBot('stop')">⏹ Stop Bot</button>
+      <button class="btn btn-primary" onclick="controlBot('restart')">🔄 Restart Bot</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📋 Console Logs</h2>
+    <span class="badge badge-blue">Last 100 lines</span>
+  </div>
+  <div class="card-body" style="padding:0">
+    <div style="background:#0a0a12;padding:0.75rem;font-family:monospace;font-size:0.75rem;max-height:500px;overflow-y:auto;white-space:pre-wrap;word-break:break-all;color:#a0a0b0;line-height:1.5" id="log-container">
+      Loading...
+    </div>
+  </div>
+</div>
+
+<script>
+async function fetchStatus() {
+  try {
+    const r = await fetch('/bot-status');
+    const data = await r.json();
+    
+    const statusIcon = document.getElementById('status-icon');
+    const statusValue = document.getElementById('status-value');
+    const statusCard = document.getElementById('status-card');
+    
+    if (data.status === 'online') {
+      statusIcon.textContent = '🟢';
+      statusValue.textContent = 'Online';
+      statusCard.style.borderColor = 'var(--green)';
+    } else if (data.status === 'starting') {
+      statusIcon.textContent = '🟡';
+      statusValue.textContent = 'Starting...';
+      statusCard.style.borderColor = 'var(--orange)';
+    } else if (data.status === 'error') {
+      statusIcon.textContent = '🔴';
+      statusValue.textContent = 'Error';
+      statusCard.style.borderColor = 'var(--red)';
+    } else {
+      statusIcon.textContent = '⚫';
+      statusValue.textContent = 'Offline';
+      statusCard.style.borderColor = 'var(--border)';
+    }
+    
+    document.getElementById('pid-value').textContent = data.pid || '-';
+    document.getElementById('uptime-value').textContent = data.uptime || '-';
+    
+    const logContainer = document.getElementById('log-container');
+    logContainer.innerHTML = data.logs.join('\n') || 'No logs yet...';
+    logContainer.scrollTop = logContainer.scrollHeight;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+async function controlBot(action) {
+  await fetch('/bot/' + action, { method: 'POST' });
+  setTimeout(fetchStatus, 1000);
+}
+
+fetchStatus();
+setInterval(fetchStatus, 3000);
+</script>
+<%- include('partials/footer') %>

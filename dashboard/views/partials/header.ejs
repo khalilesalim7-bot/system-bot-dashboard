@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/dashboard" class="nav-brand">
+      <span class="brand-dot"></span>
+      Bot Dashboard
+    </a>
+    <div class="nav-links">
+      <a href="/dashboard" class="<%= path === '/dashboard' ? 'active' : '' %>">Home</a>
+      <a href="/verification" class="<%= path === '/verification' ? 'active' : '' %>">Verification</a>
+      <a href="/leveling" class="<%= path === '/leveling' ? 'active' : '' %>">Leveling</a>
+      <a href="/booster" class="<%= path === '/booster' ? 'active' : '' %>">Booster</a>
+      <a href="/clans" class="<%= path === '/clans' ? 'active' : '' %>">Clans</a>
+      <a href="/ticket" class="<%= path === '/ticket' ? 'active' : '' %>">Ticket</a>
+      <a href="/system" class="<%= path === '/system' ? 'active' : '' %>">System</a>
+      <a href="/logs" class="<%= path === '/logs' ? 'active' : '' %>">Logs</a>
+      <a href="/settings" class="<%= path === '/settings' ? 'active' : '' %>">Settings</a>
+      <a href="/bot" class="<%= path === '/bot' ? 'active' : '' %>">Bot</a>
+      <a href="/logout" class="nav-logout">Logout</a>
+    </div>
+  </nav>
+  <main>

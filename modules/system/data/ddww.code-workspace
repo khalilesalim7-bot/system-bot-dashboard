@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../events"
+		},
+		{
+			"path": "../node_modules"
+		},
+		{
+			"path": "../commands"
+		}
+	]
+}

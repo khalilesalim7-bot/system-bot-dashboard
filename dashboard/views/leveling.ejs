@@ -1,0 +1,84 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>⭐ Leveling</h1>
+    <div class="subtitle">XP settings, role rewards, and user leaderboard</div>
+  </div>
+</div>
+
+<% if (query.msg) { %><div class="alert alert-success"><%= query.msg %></div><% } %>
+
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-value"><%= total %></div><div class="stat-label">Active Users</div></div>
+  <div class="stat-card"><div class="stat-value"><%= env.XP_MIN || '2' %>-<%= env.XP_MAX || '6' %></div><div class="stat-label">XP Range</div></div>
+  <div class="stat-card"><div class="stat-value"><%= env.XP_COOLDOWN_SECONDS || '120' %>s</div><div class="stat-label">Cooldown</div></div>
+  <div class="stat-card"><div class="stat-value"><%= env.VOICE_XP_PER_MINUTE || '6' %></div><div class="stat-label">Voice XP/min</div></div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>⚙️ XP Configuration</h2>
+    <span class="badge badge-blue">6 fields</span>
+  </div>
+  <div class="card-body">
+    <form method="POST" action="/leveling/save" class="form-grid">
+      <div class="form-group"><label>Min XP per Message</label><input type="number" name="XP_MIN" value="<%= env.XP_MIN || '2' %>"></div>
+      <div class="form-group"><label>Max XP per Message</label><input type="number" name="XP_MAX" value="<%= env.XP_MAX || '6' %>"></div>
+      <div class="form-group"><label>XP Cooldown (seconds)</label><input type="number" name="XP_COOLDOWN_SECONDS" value="<%= env.XP_COOLDOWN_SECONDS || '120' %>"></div>
+      <div class="form-group"><label>Voice XP per Minute</label><input type="number" name="VOICE_XP_PER_MINUTE" value="<%= env.VOICE_XP_PER_MINUTE || '6' %>"></div>
+      <div class="form-group"><label>Voice Award Interval (s)</label><input type="number" name="VOICE_AWARD_SECONDS" value="<%= env.VOICE_AWARD_SECONDS || '60' %>"></div>
+      <div class="form-group"><label>No XP Role ID</label><input type="text" name="NO_XP_ROLE_ID" value="<%= env.NO_XP_ROLE_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-actions" style="grid-column:1/-1">
+        <button type="submit" class="btn btn-primary">💾 Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>🏆 Role Rewards</h2>
+    <span class="badge badge-orange">7 roles</span>
+  </div>
+  <div class="card-body">
+    <form method="POST" action="/leveling/save" class="form-grid form-grid-2">
+      <div class="form-group"><label>🐉 Dragon Lord (Text 32 / Voice 38)</label><input type="text" name="ROLE_DRAGON_LORD_ID" value="<%= env.ROLE_DRAGON_LORD_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>🖤 Black Void (Text 22 / Voice 25)</label><input type="text" name="ROLE_BLACK_VOID_ID" value="<%= env.ROLE_BLACK_VOID_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>🔴 Crimson Ward (Text 14 / Voice 17)</label><input type="text" name="ROLE_CRIMSON_WARD_ID" value="<%= env.ROLE_CRIMSON_WARD_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>🔵 Sapphire Acolyte (Text 11 / Voice 13)</label><input type="text" name="ROLE_SAPPHIRE_ACOLYTE_ID" value="<%= env.ROLE_SAPPHIRE_ACOLYTE_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>⬛ Void (Text 1 / Voice 1)</label><input type="text" name="ROLE_VOID_ID" value="<%= env.ROLE_VOID_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>✍️ Writer Master (Text 22)</label><input type="text" name="ROLE_WRITER_MASTER_ID" value="<%= env.ROLE_WRITER_MASTER_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>🎤 Voice Master (Voice 25)</label><input type="text" name="ROLE_VOICE_MASTER_ID" value="<%= env.ROLE_VOICE_MASTER_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-actions" style="grid-column:1/-1">
+        <button type="submit" class="btn btn-primary">💾 Save Role Rewards</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📊 Top Users</h2>
+    <span class="badge badge-green"><%= total %> users</span>
+  </div>
+  <div class="card-body">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>User ID</th><th>Text XP</th><th>Voice XP</th><th>Total XP</th></tr></thead>
+        <tbody>
+          <% users.slice(0, 100).forEach((u, i) => { %>
+            <tr>
+              <td><%= i+1 %></td>
+              <td><code><%= u.id %></code></td>
+              <td><%= (u.textXp || 0).toLocaleString() %></td>
+              <td><%= (u.voiceXp || 0).toLocaleString() %></td>
+              <td><strong><%= u.totalXp.toLocaleString() %></strong></td>
+            </tr>
+          <% }) %>
+          <% if (users.length === 0) { %><tr><td colspan="5"><div class="empty-state"><div class="empty-icon">⭐</div>No data yet. Users earn XP by sending messages.</div></td></tr><% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

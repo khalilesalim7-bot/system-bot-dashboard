@@ -1,0 +1,66 @@
+[
+  {
+    "sectionId": "1417802626963079178",
+    "name": "Normal Clans",
+    "channels": [
+      {
+        "id": "1524190432232210483",
+        "clanRoleId": "1524190425534169260"
+      },
+      {
+        "id": "1468714442828025866",
+        "clanRoleId": "1427591792131571763"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      },
+      {
+        "id": "1517874511842775090",
+        "clanRoleId": "1517874510336888913"
+      },
+      {
+        "id": "1520559075421589566",
+        "clanRoleId": "1520559071009308783"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      }
+    ]
+  },
+  {
+    "sectionId": "1468892270765015172",
+    "name": "Top Clans",
+    "channels": [
+      {
+        "id": "1428023224184213546",
+        "clanRoleId": "1428023317603946649"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      },
+      {
+        "id": "EMPTY",
+        "clanRoleId": "EMPTY"
+      }
+    ]
+  }
+]

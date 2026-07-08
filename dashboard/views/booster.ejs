@@ -1,0 +1,68 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>🚀 Booster</h1>
+    <div class="subtitle">Manage booster roles, auto-react, and settings</div>
+  </div>
+</div>
+
+<% if (query.msg) { %><div class="alert alert-success"><%= query.msg %></div><% } %>
+
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-value"><%= boosters.length %></div><div class="stat-label">Active Boosters</div></div>
+  <div class="stat-card"><div class="stat-value"><%= env.COMMAND_PREFIX || '.bootspanel' %></div><div class="stat-label">Command Prefix</div></div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>⚙️ Booster Settings</h2>
+    <span class="badge badge-blue">7 fields</span>
+  </div>
+  <div class="card-body">
+    <form method="POST" action="/booster/save" class="form-grid">
+      <div class="form-group"><label>Command Prefix</label><input type="text" name="COMMAND_PREFIX" value="<%= env.COMMAND_PREFIX || '.bootspanel' %>"></div>
+      <div class="form-group"><label>Boost Thanks Channel ID</label><input type="text" name="BOOST_THANKS_CHANNEL_ID" value="<%= env.BOOST_THANKS_CHANNEL_ID || '' %>" placeholder="Channel ID"></div>
+      <div class="form-group"><label>Panel Channel ID</label><input type="text" name="PANEL_CHANNEL_ID" value="<%= env.PANEL_CHANNEL_ID || '' %>" placeholder="Channel ID"></div>
+      <div class="form-group"><label>Booster Role ID</label><input type="text" name="BOOSTER_ROLE_ID" value="<%= env.BOOSTER_ROLE_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>Custom Role Below ID</label><input type="text" name="CUSTOM_ROLE_BELOW_ID" value="<%= env.CUSTOM_ROLE_BELOW_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>Can Recreate Role ID</label><input type="text" name="CAN_RECREATE_ROLE_ID" value="<%= env.CAN_RECREATE_ROLE_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group">
+        <label>Delete Role When Boost Lost</label>
+        <select name="DELETE_ROLE_WHEN_BOOST_LOST">
+          <option value="true" <%= env.DELETE_ROLE_WHEN_BOOST_LOST === 'true' || !env.DELETE_ROLE_WHEN_BOOST_LOST ? 'selected' : '' %>>Yes - Delete role</option>
+          <option value="false" <%= env.DELETE_ROLE_WHEN_BOOST_LOST === 'false' ? 'selected' : '' %>>No - Keep role</option>
+        </select>
+      </div>
+      <div class="form-actions" style="grid-column:1/-1">
+        <button type="submit" class="btn btn-primary">💾 Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📋 Booster Data</h2>
+    <span class="badge badge-green"><%= boosters.length %> records</span>
+  </div>
+  <div class="card-body">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>User ID</th><th>Role ID</th><th>Edits</th><th>Deleted</th><th>Auto React</th></tr></thead>
+        <tbody>
+          <% boosters.forEach(b => { %>
+            <tr>
+              <td><code><%= b.id %></code></td>
+              <td><code><%= b.roleId || '-' %></code></td>
+              <td><%= b.editCount || 0 %> <span class="text-muted">/ 3</span></td>
+              <td><%= b.deletedRole ? '<span class="badge badge-red">Yes</span>' : '<span class="badge badge-green">No</span>' %></td>
+              <td><span class="truncate" style="display:block"><%= b.autoReact ? JSON.stringify(b.autoReact).slice(0, 60) : '-' %></span></td>
+            </tr>
+          <% }) %>
+          <% if (boosters.length === 0) { %><tr><td colspan="5"><div class="empty-state"><div class="empty-icon">🚀</div>No booster data yet</div></td></tr><% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

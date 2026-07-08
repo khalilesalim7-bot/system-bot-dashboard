@@ -1,0 +1,84 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>🎫 Ticket</h1>
+    <div class="subtitle">Support ticket system configuration</div>
+  </div>
+</div>
+
+<% if (query.msg) { %><div class="alert alert-success"><%= query.msg %></div><% } %>
+
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-value"><%= tickets.length %></div><div class="stat-label">Total Tickets</div></div>
+  <div class="stat-card"><div class="stat-value"><%= env.AUTO_CLOSE_DAYS || '2' %>d</div><div class="stat-label">Auto-Close</div></div>
+  <div class="stat-card"><div class="stat-value"><%= env.TRANSCRIPT_LIMIT || '1000' %></div><div class="stat-label">Transcript Limit</div></div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>⚙️ General Settings</h2>
+    <span class="badge badge-blue">8 fields</span>
+  </div>
+  <div class="card-body">
+    <form method="POST" action="/ticket/save" class="form-grid">
+      <div class="form-group"><label>Panel Banner URL</label><input type="text" name="PANEL_BANNER_URL" value="<%= env.PANEL_BANNER_URL || '' %>" placeholder="https://..."></div>
+      <div class="form-group"><label>Ticket Banner URL</label><input type="text" name="TICKET_BANNER_URL" value="<%= env.TICKET_BANNER_URL || '' %>" placeholder="https://..."></div>
+      <div class="form-group"><label>Transcript Limit</label><input type="number" name="TRANSCRIPT_LIMIT" value="<%= env.TRANSCRIPT_LIMIT || '1000' %>"></div>
+      <div class="form-group"><label>Auto Close (days)</label><input type="number" name="AUTO_CLOSE_DAYS" value="<%= env.AUTO_CLOSE_DAYS || '2' %>"></div>
+      <div class="form-group"><label>Auto Close Check (min)</label><input type="number" name="AUTO_CLOSE_CHECK_MINUTES" value="<%= env.AUTO_CLOSE_CHECK_MINUTES || '30' %>"></div>
+      <div class="form-group"><label>Staff Role ID</label><input type="text" name="STAFF_ROLE_ID" value="<%= env.STAFF_ROLE_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>Ticket Open Role ID</label><input type="text" name="TICKET_OPEN_ROLE_ID" value="<%= env.TICKET_OPEN_ROLE_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>Ticket Command User ID</label><input type="text" name="TICKET_COMMAND_USER_ID" value="<%= env.TICKET_COMMAND_USER_ID || '' %>" placeholder="User ID"></div>
+      <div class="form-actions" style="grid-column:1/-1">
+        <button type="submit" class="btn btn-primary">💾 Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📁 Categories</h2>
+    <span class="badge badge-orange">6 fields</span>
+  </div>
+  <div class="card-body">
+    <form method="POST" action="/ticket/save" class="form-grid">
+      <div class="form-group"><label>General Category</label><input type="text" name="GENERAL_CATEGORY_ID" value="<%= env.GENERAL_CATEGORY_ID || '' %>" placeholder="Category ID"></div>
+      <div class="form-group"><label>Support Category</label><input type="text" name="SUPPORT_CATEGORY_ID" value="<%= env.SUPPORT_CATEGORY_ID || '' %>" placeholder="Category ID"></div>
+      <div class="form-group"><label>Clan Category</label><input type="text" name="CLAN_CATEGORY_ID" value="<%= env.CLAN_CATEGORY_ID || '' %>" placeholder="Category ID"></div>
+      <div class="form-group"><label>Closed Category</label><input type="text" name="CLOSED_CATEGORY_ID" value="<%= env.CLOSED_CATEGORY_ID || '' %>" placeholder="Category ID"></div>
+      <div class="form-group"><label>Log Category</label><input type="text" name="LOG_CATEGORY_ID" value="<%= env.LOG_CATEGORY_ID || '' %>" placeholder="Category ID"></div>
+      <div class="form-group"><label>Log Channel</label><input type="text" name="LOG_CHANNEL_ID" value="<%= env.LOG_CHANNEL_ID || '' %>" placeholder="Channel ID"></div>
+      <div class="form-actions" style="grid-column:1/-1">
+        <button type="submit" class="btn btn-primary">💾 Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📋 Ticket List</h2>
+    <span class="badge badge-green"><%= tickets.length %> tickets</span>
+  </div>
+  <div class="card-body">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Ticket</th><th>User</th><th>Channel</th><th>Type</th><th>Status</th></tr></thead>
+        <tbody>
+          <% tickets.slice(0, 50).forEach(t => { %>
+            <tr>
+              <td><code><%= (t.id || '').slice(0, 12) %>..</code></td>
+              <td><code><%= t.userId || '-' %></code></td>
+              <td><code><%= (t.channelId || '').slice(0, 12) %>..</code></td>
+              <td><%= t.type || 'general' %></td>
+              <td><%= t.closed ? '<span class="badge badge-red">Closed</span>' : '<span class="badge badge-green">Open</span>' %></td>
+            </tr>
+          <% }) %>
+          <% if (tickets.length === 0) { %><tr><td colspan="5"><div class="empty-state"><div class="empty-icon">🎫</div>No tickets created yet</div></td></tr><% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

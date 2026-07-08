@@ -1,0 +1,22 @@
+{
+  "name": "combined-discord-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dashboard/server.js",
+    "start:bot": "node index.js",
+    "deploy:leveling": "node modules/leveling/deploy-commands.js"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "@napi-rs/canvas": "latest",
+    "@napi-rs/canvas-win32-x64-msvc": "^1.0.2",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0"
+  }
+}

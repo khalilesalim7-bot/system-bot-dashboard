@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>Dashboard</h1>
+    <div class="subtitle">Manage your bot modules and configuration</div>
+  </div>
+</div>
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-icon">📦</div>
+    <div class="stat-value"><%= modules.length %></div>
+    <div class="stat-label">Modules</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">⚙️</div>
+    <div class="stat-value"><%= envCount %></div>
+    <div class="stat-label">Config Vars</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">🟢</div>
+    <div class="stat-value"><%= PORT %></div>
+    <div class="stat-label">Dashboard Port</div>
+  </div>
+</div>
+
+<h2 style="font-size:1rem;margin-bottom:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.04em;">Modules</h2>
+<div class="module-grid">
+  <% 
+    const moduleIcons = { system: '🔧', verification: '✅', leveling: '⭐', booster: '🚀', ticket: '🎫', welcome: '👋', spy: '🕵️', 'gif-permission': '🎬' };
+    modules.forEach(m => { 
+      const icon = moduleIcons[m] || '📁';
+      const link = m === 'leveling' ? 'leveling' : (m === 'gif-permission' || m === 'spy' || m === 'welcome' || m === 'data') ? 'system' : m;
+  %>
+    <a href="/<%= link %>" class="module-card">
+      <div class="module-icon"><%= icon %></div>
+      <div class="module-name"><%= m.charAt(0).toUpperCase() + m.slice(1).replace('-', ' ') %></div>
+      <div class="module-desc"><%= ({system:'Clans, ADS, Anti-delete', verification:'Verify, blacklist, stats', leveling:'XP, ranks, rewards', booster:'Roles, auto-react', ticket:'Support tickets', welcome:'Join messages', spy:'Spy game', 'gif-permission':'GIF perm'})[m] || '' %></div>
+    </a>
+  <% }) %>
+  <a href="/logs" class="module-card">
+    <div class="module-icon">📋</div>
+    <div class="module-name">Logs</div>
+    <div class="module-desc">Verification history</div>
+  </a>
+  <a href="/settings" class="module-card">
+    <div class="module-icon">⚙️</div>
+    <div class="module-name">Settings</div>
+    <div class="module-desc">Environment config</div>
+  </a>
+</div>
+<%- include('partials/footer') %>

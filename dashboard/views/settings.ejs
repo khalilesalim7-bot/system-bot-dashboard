@@ -1,0 +1,77 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>⚙️ Settings</h1>
+    <div class="subtitle">Edit environment configuration (.env)</div>
+  </div>
+</div>
+
+<% if (query.msg) { %><div class="alert alert-success"><%= query.msg %></div><% } %>
+
+<div class="card">
+  <div class="card-header">
+    <h2>🔒 Security Notice</h2>
+  </div>
+  <div class="card-body">
+    <p class="text-muted">Token and API keys are hidden for security. You can only edit safe configuration values from this interface.</p>
+  </div>
+</div>
+
+<% 
+const grouped = {
+  'General': ['GUILD_ID', 'DISCORD_GUILD_ID', 'STAFF_ROLE_ID', 'DASHBOARD_PORT', 'DASHBOARD_PASSWORD'],
+  'Verification': ['CONTROL_PANEL_CHANNEL', 'VERIFICATION_LOG_CHANNEL', 'BLACKLIST_LOG_CHANNEL', 'VOICE_LOG_CHANNEL', 'NOT_VERIFIED_ROLE', 'MAN_ROLE', 'GIRL_ROLE', 'VERIFIED_ROLE', 'STAFF_ROLE', 'ALLOWED_VOICES', 'VERIFY_LOCK_MINUTES', 'VERIFICATION_TEAM_ROLE', 'VERIFICATION_CATEGORY'],
+  'Leveling': ['XP_MIN', 'XP_MAX', 'XP_COOLDOWN_SECONDS', 'VOICE_XP_PER_MINUTE', 'VOICE_AWARD_SECONDS', 'NO_XP_ROLE_ID', 'ROLE_DRAGON_LORD_ID', 'ROLE_BLACK_VOID_ID', 'ROLE_CRIMSON_WARD_ID', 'ROLE_SAPPHIRE_ACOLYTE_ID', 'ROLE_VOID_ID', 'ROLE_WRITER_MASTER_ID', 'ROLE_VOICE_MASTER_ID'],
+  'Ticket': ['PANEL_BANNER_URL', 'TICKET_BANNER_URL', 'TRANSCRIPT_LIMIT', 'AUTO_CLOSE_DAYS', 'AUTO_CLOSE_CHECK_MINUTES', 'TICKET_COMMAND_USER_ID', 'TICKET_OPEN_ROLE_ID', 'GENERAL_CATEGORY_ID', 'SUPPORT_CATEGORY_ID', 'CLAN_CATEGORY_ID', 'CLOSED_CATEGORY_ID', 'LOG_CATEGORY_ID', 'LOG_CHANNEL_ID'],
+  'Booster': ['COMMAND_PREFIX', 'BOOST_THANKS_CHANNEL_ID', 'PANEL_CHANNEL_ID', 'BOOSTER_ROLE_ID', 'CUSTOM_ROLE_BELOW_ID', 'CAN_RECREATE_ROLE_ID', 'DELETE_ROLE_WHEN_BOOST_LOST'],
+  'Other': ['CLAN_ROLE_PARENT_ID', 'GIRLS_VERIFICATION_VOICES', 'GIRLS_VOICE_LOG_CHANNEL', 'VERIFICATION_NOTIFY_COOLDOWN_SECONDS', 'SYSTEM_VOICE_CHANNEL_ID', 'GIF_PERMISSION_PANEL_CHANNEL_ID', 'GIF_PERMISSION_LOG_CHANNEL_ID']
+};
+%>
+
+<% Object.entries(grouped).forEach(([groupName, keys]) => { %>
+  <div class="card">
+    <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+      <h2>📁 <%= groupName %></h2>
+      <span class="badge badge-blue"><%= keys.length %> fields</span>
+    </div>
+    <div class="card-body">
+      <form method="POST" action="/settings/save" class="form-grid">
+        <% keys.forEach(key => { %>
+          <% if (env[key] !== undefined) { %>
+            <div class="form-group">
+              <label><%= key %></label>
+              <input type="text" name="<%= key %>" value="<%= env[key] %>">
+            </div>
+          <% } %>
+        <% }) %>
+        <div class="form-actions" style="grid-column:1/-1">
+          <button type="submit" class="btn btn-primary">💾 Save <%= groupName %></button>
+        </div>
+      </form>
+    </div>
+  </div>
+<% }) %>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📋 All Config Values</h2>
+  </div>
+  <div class="card-body">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Value</th></tr></thead>
+        <tbody>
+          <% Object.entries(env).forEach(([k, v]) => { %>
+            <tr>
+              <td><code><%= k %></code></td>
+              <td class="truncate" style="max-width:400px">
+                <%= k.includes('TOKEN') || k.includes('KEY') || k.includes('SECRET') ? '🔒 Hidden' : v %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

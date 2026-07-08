@@ -1,0 +1,31 @@
+{
+  "boosters": {
+    "1084793381491834890": {
+      "roleId": null,
+      "editCount": 0,
+      "autoReact": {
+        "mentionEmojis": [
+          {
+            "type": "custom",
+            "id": "1473011496446464112"
+          }
+        ],
+        "messageEmojis": []
+      }
+    },
+    "1252902563074805871": {
+      "roleId": null,
+      "editCount": 0,
+      "deletedRole": false,
+      "autoReact": {
+        "mentionEmojis": [
+          {
+            "type": "custom",
+            "id": "1473721961116078215"
+          }
+        ],
+        "messageEmojis": []
+      }
+    }
+  }
+}

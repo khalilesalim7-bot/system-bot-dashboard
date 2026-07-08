@@ -1,0 +1,723 @@
+{
+  "1146193819159773254": {
+    "ban": 0,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "history": [],
+    "warn": 0
+  },
+  "1336400123713949856": {
+    "history": [],
+    "unban": 2,
+    "warn": 0,
+    "removetimeout": 7,
+    "timeout": 11,
+    "mute": 7,
+    "unmute": 3
+  },
+  "1270475720132661366": {
+    "ban": 0,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "warn": 1,
+    "history": [
+      {
+        "action": "Warn",
+        "reason": "hi",
+        "date": "2026-02-01T22:29:09.249Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "id": "#2",
+        "action": "unban",
+        "reason": "Aucune raison fournie",
+        "date": "2026-02-02T16:40:53.852Z",
+        "by": "unfuckwithable3"
+      }
+    ]
+  },
+  "716003307990286405": {
+    "ban": 0,
+    "unban": 0,
+    "timeout": 13,
+    "removetimeout": 2,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Timeout",
+        "reason": "Aucune raison fournie",
+        "duration": "1m",
+        "date": "2026-02-03T20:00:42.726Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "**No reason provided**",
+        "duration": "1m",
+        "date": "2026-02-03T20:10:32.617Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "RemoveTimeout",
+        "reason": "Aucune raison fournie",
+        "date": "2026-02-03T20:11:14.366Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "**No reason provided**",
+        "duration": "1m",
+        "date": "2026-02-03T20:11:57.538Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "**No reason provided**",
+        "duration": "1d",
+        "date": "2026-02-03T20:12:11.291Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "mwah",
+        "duration": "1d",
+        "date": "2026-02-03T20:12:20.317Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "RemoveTimeout",
+        "reason": "mwah",
+        "date": "2026-02-03T20:12:51.375Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "**No reason provided**",
+        "duration": "1d",
+        "date": "2026-02-03T20:14:43.360Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "hii",
+        "duration": "1d",
+        "date": "2026-02-03T20:24:18.712Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "hiihhh",
+        "duration": "1d",
+        "date": "2026-02-03T20:25:00.967Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "hiihhhdd",
+        "duration": "1d",
+        "date": "2026-02-03T20:26:37.538Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "hiihhhddww",
+        "duration": "1d",
+        "date": "2026-02-03T20:28:21.934Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "hiihhhddwwdd",
+        "duration": "1d",
+        "date": "2026-02-03T20:28:46.150Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "hiihhhddwwdde",
+        "duration": "1d",
+        "date": "2026-02-03T20:29:04.546Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Timeout",
+        "reason": "hiihhhddwwddedd",
+        "duration": "1d",
+        "date": "2026-02-03T20:30:14.358Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "id": "#16",
+        "action": "ban",
+        "reason": "dnt wait for me",
+        "date": "2026-02-04T11:42:41.366Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "id": "#17",
+        "action": "unban",
+        "reason": "Aucune raison fournie",
+        "date": "2026-02-04T14:32:27.294Z",
+        "by": "unfuckwithable3"
+      }
+    ]
+  },
+  "761204103950237696": {
+    "ban": 0,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "warn": 1,
+    "history": [
+      {
+        "action": "Warn",
+        "reason": "hi bb",
+        "date": "2026-02-04T21:34:02.167Z",
+        "by": "unfuckwithable3"
+      }
+    ]
+  },
+  "959371944321515531": {
+    "ban": 3,
+    "unban": 3,
+    "timeout": 0,
+    "removetimeout": 1,
+    "warn": 0,
+    "history": [
+      {
+        "action": "RemoveTimeout",
+        "reason": "Aucune raison fournie",
+        "date": "2026-02-06T22:20:35.731Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Ban",
+        "reason": "hi",
+        "date": "2026-02-12T11:13:51.533Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "id": "#3",
+        "action": "unban",
+        "reason": "hi",
+        "date": "2026-02-12T11:16:37.427Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Ban",
+        "reason": "hi",
+        "date": "2026-02-12T11:18:39.313Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Unban",
+        "reason": "hi",
+        "date": "2026-02-12T11:20:22.230Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Ban",
+        "reason": "hi",
+        "date": "2026-02-12T11:34:21.140Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Unban",
+        "reason": "hi",
+        "date": "2026-02-12T11:34:54.804Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Unban",
+        "reason": "hi",
+        "date": "2026-02-12T11:41:45.598Z",
+        "by": "unfuckwithable3"
+      }
+    ]
+  },
+  "598634045299097603": {
+    "ban": 1,
+    "unban": 1,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-02-14T13:20:53.582Z",
+        "by": "unfuckwithable3"
+      },
+      {
+        "action": "Unban",
+        "reason": "https://discord.gg/aYcYtgus",
+        "date": "2026-02-14T13:21:22.169Z",
+        "by": "unfuckwithable3"
+      }
+    ]
+  },
+  "457659667133366272": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "ha9 li khir li drto fik hbb tysm",
+        "date": "2026-02-15T21:09:52.622Z",
+        "by": "unfuckwithable3"
+      }
+    ]
+  },
+  "886299807742828654": {
+    "ban": 0,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 1,
+    "history": [
+      {
+        "action": "Warn",
+        "reason": "mommy",
+        "date": "2026-04-30T20:03:16.168Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1482634889407889629": {
+    "ban": 0,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 1,
+    "history": [
+      {
+        "action": "Warn",
+        "reason": "test",
+        "date": "2026-04-30T22:00:21.019Z",
+        "by": "p9qzzx"
+      }
+    ]
+  },
+  "593064341595488272": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-05-02T16:46:05.944Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "987412601820553247": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-05-02T16:46:25.111Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1120393452669116437": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-05-06T16:44:44.609Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1301234740698939573": {
+    "ban": 2,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-05-09T21:30:28.126Z",
+        "by": "justbgh_"
+      },
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-05-09T21:35:35.249Z",
+        "by": "justbgh_"
+      }
+    ]
+  },
+  "1409639104995397762": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "2 boosts",
+        "date": "2026-05-11T13:09:00.971Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1497922329819349053": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "nhre9 sowa ta3 ymak",
+        "date": "2026-05-13T10:00:37.306Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "869945671875186748": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-05-16T20:59:40.755Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1476212688433713243": {
+    "ban": 1,
+    "unban": 1,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "mwah",
+        "date": "2026-05-19T22:38:48.090Z",
+        "by": "azurexccold"
+      },
+      {
+        "action": "Unban",
+        "reason": "No reason provided",
+        "date": "2026-05-19T22:38:54.398Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1494533546776334376": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-05-23T05:47:33.245Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1352834543589134408": {
+    "ban": 1,
+    "unban": 1,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Unban",
+        "reason": "No reason provided",
+        "date": "2026-05-23T17:59:05.156Z",
+        "by": "azurexccold"
+      },
+      {
+        "action": "BanIP",
+        "reason": "No reason provided",
+        "date": "2026-07-02T13:16:39.185Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "966311922750353428": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "crypto scam",
+        "date": "2026-05-29T14:42:01.277Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1477792730812907651": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "jc",
+        "date": "2026-06-10T00:05:09.682Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1483983189952299089": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "jcs",
+        "date": "2026-06-10T00:05:26.592Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1512557694312120431": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "uwu",
+        "date": "2026-06-10T00:05:40.956Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1506303219045892197": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "jek",
+        "date": "2026-06-10T00:05:56.723Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1507549813145731232": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "el",
+        "date": "2026-06-10T00:06:21.975Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1333544580091482154": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "72n",
+        "date": "2026-06-10T00:06:47.307Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1252902563074805871": {
+    "ban": 0,
+    "unban": 1,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Unban",
+        "reason": "https://discord.gg/WcMCd8ZV9",
+        "date": "2026-06-17T16:28:04.512Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1394090291035898074": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "ads",
+        "date": "2026-06-30T12:22:33.303Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1517260782977548366": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "mchi nik mok",
+        "date": "2026-06-30T19:47:48.030Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1166421404682567772": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "No reason provided",
+        "date": "2026-07-06T21:46:40.178Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1193982883665281126": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "sahbi rouh 3end sowa ta3 ymak ou dber staffs l server ta3k machi 3end zbi ana",
+        "date": "2026-07-07T11:21:09.195Z",
+        "by": "azurexccold"
+      }
+    ]
+  },
+  "1477037462139437156": {
+    "ban": 1,
+    "unban": 0,
+    "timeout": 0,
+    "removetimeout": 0,
+    "mute": 0,
+    "unmute": 0,
+    "warn": 0,
+    "history": [
+      {
+        "action": "Ban",
+        "reason": "n9ch",
+        "date": "2026-07-07T14:23:46.682Z",
+        "by": "azurexccold"
+      }
+    ]
+  }
+}

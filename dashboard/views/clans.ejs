@@ -1,0 +1,99 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>🏰 Clans</h1>
+    <div class="subtitle">Clan system configuration, points, and sections</div>
+  </div>
+</div>
+
+<% if (query.msg) { %><div class="alert alert-success"><%= query.msg %></div><% } %>
+
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-value"><%= clans.length %></div><div class="stat-label">Active Clans</div></div>
+  <div class="stat-card"><div class="stat-value"><%= sections.length %></div><div class="stat-label">Sections</div></div>
+  <div class="stat-card"><div class="stat-value"><%= clans.reduce((sum, c) => sum + (clanPoints[c.clanRoleId] || 0), 0).toLocaleString() %></div><div class="stat-label">Total Points</div></div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>⚙️ Settings</h2>
+  </div>
+  <div class="card-body">
+    <form method="POST" action="/clans/save" class="form-grid">
+      <div class="form-group"><label>Clan Role Parent ID</label><input type="text" name="CLAN_ROLE_PARENT_ID" value="<%= env.CLAN_ROLE_PARENT_ID || '' %>" placeholder="Role ID"></div>
+      <div class="form-actions" style="grid-column:1/-1">
+        <button type="submit" class="btn btn-primary">💾 Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>🏰 Clan Leaderboard</h2>
+    <span class="badge badge-green"><%= clans.length %> clans</span>
+  </div>
+  <div class="card-body">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Channel ID</th><th>Role ID</th><th>Points</th></tr></thead>
+        <tbody>
+          <% clans.sort((a,b) => (clanPoints[b.clanRoleId] || 0) - (clanPoints[a.clanRoleId] || 0)).forEach((c, i) => { %>
+            <tr>
+              <td><%= i+1 %></td>
+              <td><code><%= c.id %></code></td>
+              <td><code><%= c.clanRoleId %></code></td>
+              <td><strong><%= (clanPoints[c.clanRoleId] || 0).toLocaleString() %></strong></td>
+            </tr>
+          <% }) %>
+          <% if (clans.length === 0) { %><tr><td colspan="4"><div class="empty-state"><div class="empty-icon">🏰</div>No clans created yet</div></td></tr><% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📂 Sections</h2>
+    <span class="badge badge-orange"><%= sections.length %> sections</span>
+  </div>
+  <div class="card-body">
+    <% sections.forEach((s, si) => { %>
+      <h3 style="margin: 0.5rem 0 0.5rem;font-size:0.9rem;color:var(--text-secondary)"><%= s.name || 'Section ' + (si+1) %> <code style="font-size:0.75rem"><%= s.sectionId %></code></h3>
+      <div class="table-wrap mb-2">
+        <table>
+          <thead><tr><th>Channel ID</th><th>Role ID</th><th>Status</th></tr></thead>
+          <tbody>
+            <% (s.channels || []).forEach(ch => { %>
+              <tr>
+                <td><code><%= ch.id %></code></td>
+                <td><code><%= ch.clanRoleId %></code></td>
+                <td><%= ch.id === 'EMPTY' ? '<span class="badge badge-orange">Empty Slot</span>' : '<span class="badge badge-green">Occupied</span>' %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📋 Panel Data</h2>
+  </div>
+  <div class="card-body">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Value</th></tr></thead>
+        <tbody>
+          <% Object.entries(clanPanels).forEach(([k, v]) => { %>
+            <tr><td><%= k %></td><td class="truncate" style="max-width:400px"><%= typeof v === 'object' ? JSON.stringify(v) : String(v) %></td></tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

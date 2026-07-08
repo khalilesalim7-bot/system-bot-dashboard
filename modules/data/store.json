@@ -1,0 +1,687 @@
+{
+  "guilds": {
+    "1417800065967325216": {
+      "users": {
+        "1084793381491834890": {
+          "textXp": 614,
+          "voiceXp": 26796,
+          "backgroundIndex": 1,
+          "lastMessageAt": 1783466378373
+        },
+        "884489306717188108": {
+          "textXp": 0,
+          "voiceXp": 80,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1404339168825577604": {
+          "textXp": 236,
+          "voiceXp": 25084,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783468537180
+        },
+        "1476212688433713243": {
+          "textXp": 0,
+          "voiceXp": 5340,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1066345479710965770": {
+          "textXp": 4,
+          "voiceXp": 576,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782494799622
+        },
+        "1252902563074805871": {
+          "textXp": 119,
+          "voiceXp": 7008,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783505612738
+        },
+        "959371944321515531": {
+          "textXp": 4,
+          "voiceXp": 2562,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1781969486831
+        },
+        "1267792416765902961": {
+          "textXp": 5,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1781970206157
+        },
+        "1146193819159773254": {
+          "textXp": 41,
+          "voiceXp": 14730,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783115493255
+        },
+        "1192872916870758402": {
+          "textXp": 0,
+          "voiceXp": 36,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "486241463009542154": {
+          "textXp": 4,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782493154958
+        },
+        "1268349725707472916": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1511349959323156562": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1015976008911954070": {
+          "textXp": 34,
+          "voiceXp": 12498,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783105523016
+        },
+        "1509992554354049186": {
+          "textXp": 38,
+          "voiceXp": 8766,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782913043307
+        },
+        "917734289037221898": {
+          "textXp": 8,
+          "voiceXp": 9306,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783465962610
+        },
+        "730321601995735051": {
+          "textXp": 12,
+          "voiceXp": 10656,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783473349539
+        },
+        "1404920434226364631": {
+          "textXp": 16,
+          "voiceXp": 6648,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782923516181
+        },
+        "1478957199572336884": {
+          "textXp": 67,
+          "voiceXp": 18006,
+          "backgroundIndex": 1,
+          "lastMessageAt": 1783462908242
+        },
+        "1483114799687663717": {
+          "textXp": 0,
+          "voiceXp": 1722,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "712396082096898099": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1500664812663738552": {
+          "textXp": 0,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "734804954513932308": {
+          "textXp": 0,
+          "voiceXp": 48,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "975484853648773162": {
+          "textXp": 0,
+          "voiceXp": 2316,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1203021712808214659": {
+          "textXp": 7,
+          "voiceXp": 2208,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782775961301
+        },
+        "764926928574349322": {
+          "textXp": 51,
+          "voiceXp": 3816,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783163320889
+        },
+        "1011646955102945412": {
+          "textXp": 0,
+          "voiceXp": 42,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1491009663037341746": {
+          "textXp": 0,
+          "voiceXp": 426,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1453039345459269665": {
+          "textXp": 0,
+          "voiceXp": 24,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1347173837061619818": {
+          "textXp": 6,
+          "voiceXp": 132,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782745269703
+        },
+        "1501420395503554702": {
+          "textXp": 0,
+          "voiceXp": 138,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1051576081460756591": {
+          "textXp": 4,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782747006338
+        },
+        "1217132660439257159": {
+          "textXp": 2,
+          "voiceXp": 450,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782909909576
+        },
+        "1388198190653898783": {
+          "textXp": 2,
+          "voiceXp": 354,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783376692750
+        },
+        "1052636435485827172": {
+          "textXp": 6,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782751854482
+        },
+        "1394054258034212956": {
+          "textXp": 0,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1512863279171506207": {
+          "textXp": 5,
+          "voiceXp": 192,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782909890667
+        },
+        "1352253751603364032": {
+          "textXp": 9,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782842540966
+        },
+        "946482753447288903": {
+          "textXp": 0,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1458820309875556475": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "474577719741382657": {
+          "textXp": 8,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782833078349
+        },
+        "760901562213335101": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "333725708310544384": {
+          "textXp": 0,
+          "voiceXp": 7062,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "767381649507483658": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1381055960734236854": {
+          "textXp": 6,
+          "voiceXp": 174,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782783974685
+        },
+        "1487951215789609052": {
+          "textXp": 3,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782785433957
+        },
+        "1492591391807901766": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "990987411867730040": {
+          "textXp": 3,
+          "voiceXp": 24,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782838818191
+        },
+        "828243558631866408": {
+          "textXp": 6,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782833232656
+        },
+        "1080079888788242482": {
+          "textXp": 5,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782899902718
+        },
+        "864829609542156329": {
+          "textXp": 19,
+          "voiceXp": 1182,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782851416651
+        },
+        "1127748503146348596": {
+          "textXp": 18,
+          "voiceXp": 1170,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848180725
+        },
+        "1407201723243692065": {
+          "textXp": 3,
+          "voiceXp": 2202,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782914890773
+        },
+        "727115483165491260": {
+          "textXp": 0,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "908012711235973191": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1520411210527277297": {
+          "textXp": 0,
+          "voiceXp": 78,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "342355046459244544": {
+          "textXp": 6,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782846276577
+        },
+        "428713873546412042": {
+          "textXp": 0,
+          "voiceXp": 258,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "989879094030249994": {
+          "textXp": 2,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848553226
+        },
+        "933830001374150667": {
+          "textXp": 6,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848553510
+        },
+        "927832425621508156": {
+          "textXp": 3,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848553749
+        },
+        "922796030091722762": {
+          "textXp": 3,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848555171
+        },
+        "1345472734251188278": {
+          "textXp": 3,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848555717
+        },
+        "920618665479643136": {
+          "textXp": 2,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848556942
+        },
+        "918170322002386956": {
+          "textXp": 6,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782848561429
+        },
+        "1083814447207960627": {
+          "textXp": 0,
+          "voiceXp": 240,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1319040401184784404": {
+          "textXp": 5,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782905558729
+        },
+        "1410649388375609454": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1147261701301997669": {
+          "textXp": 2,
+          "voiceXp": 54,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782909576764
+        },
+        "1302918020967956531": {
+          "textXp": 0,
+          "voiceXp": 324,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "936562569479598082": {
+          "textXp": 2,
+          "voiceXp": 72,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782931341848
+        },
+        "748508259987619961": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1433555880951025844": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "807641572090052629": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "963971673042853969": {
+          "textXp": 5,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782937149007
+        },
+        "1415652693271117875": {
+          "textXp": 5,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782937557492
+        },
+        "1152270821088305166": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1434292513061077082": {
+          "textXp": 0,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1491125984752308325": {
+          "textXp": 4,
+          "voiceXp": 0,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1782939420788
+        },
+        "1000057340214644846": {
+          "textXp": 0,
+          "voiceXp": 12,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1519628369501749388": {
+          "textXp": 0,
+          "voiceXp": 60,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "895389429034799134": {
+          "textXp": 0,
+          "voiceXp": 1092,
+          "backgroundIndex": 2,
+          "lastMessageAt": 0
+        },
+        "1278703268264022038": {
+          "textXp": 3,
+          "voiceXp": 6,
+          "backgroundIndex": 2,
+          "lastMessageAt": 1783030724082
+        },
+        "1449055015875510293": {
+          "textXp": 0,
+          "voiceXp": 186,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1233878029428592667": {
+          "textXp": 0,
+          "voiceXp": 1764,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1495527111639695441": {
+          "textXp": 6,
+          "voiceXp": 0,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783157842737
+        },
+        "1438635776995758081": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1283708763370684439": {
+          "textXp": 10,
+          "voiceXp": 252,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783380256973
+        },
+        "1522950288213016682": {
+          "textXp": 0,
+          "voiceXp": 2640,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "971706150204633088": {
+          "textXp": 0,
+          "voiceXp": 24,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1477037462139437156": {
+          "textXp": 0,
+          "voiceXp": 96,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1166421404682567772": {
+          "textXp": 19,
+          "voiceXp": 36,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783374292280
+        },
+        "831905076553187341": {
+          "textXp": 0,
+          "voiceXp": 2520,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1193982883665281126": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1385976118741569700": {
+          "textXp": 0,
+          "voiceXp": 162,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1508916615088181309": {
+          "textXp": 2,
+          "voiceXp": 918,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783433513728
+        },
+        "1214660461782630454": {
+          "textXp": 6,
+          "voiceXp": 0,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783434275444
+        },
+        "1304471028457799783": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "954744229354172426": {
+          "textXp": 0,
+          "voiceXp": 120,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "853247428316233768": {
+          "textXp": 4,
+          "voiceXp": 0,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783449718545
+        },
+        "1381898830391283782": {
+          "textXp": 12,
+          "voiceXp": 1110,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783503101120
+        },
+        "1282398057815871548": {
+          "textXp": 6,
+          "voiceXp": 474,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783459707700
+        },
+        "1012079302717734992": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "497912815290417152": {
+          "textXp": 2,
+          "voiceXp": 498,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783464416681
+        },
+        "1371932742953996378": {
+          "textXp": 28,
+          "voiceXp": 882,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783466465573
+        },
+        "1098261530459525230": {
+          "textXp": 0,
+          "voiceXp": 120,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "923385215894843452": {
+          "textXp": 2,
+          "voiceXp": 534,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783459974766
+        },
+        "1517521517917769839": {
+          "textXp": 0,
+          "voiceXp": 6,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1514016271077871657": {
+          "textXp": 0,
+          "voiceXp": 354,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "675098572009766942": {
+          "textXp": 0,
+          "voiceXp": 96,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "856279589944557578": {
+          "textXp": 0,
+          "voiceXp": 12,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        },
+        "1283368945847373897": {
+          "textXp": 5,
+          "voiceXp": 0,
+          "backgroundIndex": 0,
+          "lastMessageAt": 1783466765974
+        },
+        "1121568917391954021": {
+          "textXp": 0,
+          "voiceXp": 24,
+          "backgroundIndex": 0,
+          "lastMessageAt": 0
+        }
+      }
+    }
+  },
+  "schemaVersion": 2
+}

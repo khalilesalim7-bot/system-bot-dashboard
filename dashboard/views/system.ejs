@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div>
+    <h1>🔧 System</h1>
+    <div class="subtitle">Core system configuration, clans, and commands</div>
+  </div>
+</div>
+
+<% if (query.msg) { %><div class="alert alert-success"><%= query.msg %></div><% } %>
+
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-value"><%= config.prefix || '.' %></div><div class="stat-label">Prefix</div></div>
+  <div class="stat-card"><div class="stat-value"><%= config.ownerID ? config.ownerID.slice(0,6)+'..' : '-' %></div><div class="stat-label">Owner ID</div></div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>⚙️ Config</h2>
+    <span class="badge badge-blue">6 fields</span>
+  </div>
+  <div class="card-body">
+    <form method="POST" action="/system/save-config" class="form-grid">
+      <div class="form-group"><label>Command Prefix</label><input type="text" name="prefix" value="<%= config.prefix || '.' %>"></div>
+      <div class="form-group"><label>Owner ID</label><input type="text" name="ownerID" value="<%= config.ownerID || '' %>" placeholder="User ID"></div>
+      <div class="form-group"><label>Security Channel</label><input type="text" name="securityChannel" value="<%= config.securityChannel || '' %>" placeholder="Channel ID"></div>
+      <div class="form-group"><label>TOP 5 Role ID</label><input type="text" name="TOP_5_ROLE" value="<%= config.TOP_5_ROLE || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>TOP 100K Role ID</label><input type="text" name="TOP_100K_ROLE" value="<%= config.TOP_100K_ROLE || '' %>" placeholder="Role ID"></div>
+      <div class="form-group"><label>TOP 200K Role ID</label><input type="text" name="TOP_200K_ROLE" value="<%= config.TOP_200K_ROLE || '' %>" placeholder="Role ID"></div>
+      <div class="form-actions" style="grid-column:1/-1">
+        <button type="submit" class="btn btn-primary">💾 Save Config</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📋 Other Modules</h2>
+  </div>
+  <div class="card-body">
+    <div class="form-grid">
+      <div class="form-group"><label>👋 Welcome Channel</label><input type="text" value="<%= env.WELCOME_CHANNEL_ID || env.GUILD_ID || 'Not set' %>" disabled></div>
+      <div class="form-group"><label>🎬 GIF Permission Panel</label><input type="text" value="<%= env.GIF_PERMISSION_PANEL_CHANNEL_ID || 'Not set' %>" disabled></div>
+      <div class="form-group"><label>🎬 GIF Permission Log</label><input type="text" value="<%= env.GIF_PERMISSION_LOG_CHANNEL_ID || 'Not set' %>" disabled></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>🔒 Restricted Channels</h2>
+    <span class="badge badge-red"><%= (config.restrictedChannels || []).length %></span>
+  </div>
+  <div class="card-body">
+    <% if (config.restrictedChannels && config.restrictedChannels.length > 0) { %>
+      <ul style="list-style:none;padding:0">
+        <% config.restrictedChannels.forEach(ch => { %>
+          <li style="padding:0.35rem 0;border-bottom:1px solid var(--border);font-size:0.85rem"><code><%= ch %></code></li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <div class="empty-state"><div class="empty-icon">🔓</div>No restricted channels</div>
+    <% } %>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" onclick="this.parentElement.classList.toggle('collapsed')">
+    <h2>📄 Raw Config</h2>
+  </div>
+  <div class="card-body">
+    <pre style="background:var(--bg-input);padding:1rem;border-radius:var(--radius-sm);overflow:auto;font-size:0.78rem;color:var(--text-secondary)"><%= JSON.stringify(config, null, 2) %></pre>
+  </div>
+</div>
+<%- include('partials/footer') %>
