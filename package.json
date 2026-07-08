@@ -12,7 +12,7 @@
   "dependencies": {
     "@discordjs/voice": "^0.18.0",
     "@napi-rs/canvas": "latest",
-    "@napi-rs/canvas-win32-x64-msvc": "^1.0.2",
+    "@napi-rs/canvas-linux-x64-gnu": "latest",
     "discord.js": "^14.26.4",
     "dotenv": "^17.4.2",
     "ejs": "^3.1.10",
